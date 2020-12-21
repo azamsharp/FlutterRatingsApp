@@ -47,6 +47,7 @@ class _Rating extends State<Rating> {
             setState(() {
               _currentRating = 0;
             });
+            this.widget.onRatingSelected(_currentRating);
           },
         )
       ],

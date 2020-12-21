@@ -33,10 +33,12 @@ class _RatingsPage extends State<RatingsPage> {
                   _rating = rating;
                 });
               }, 5),
-              _rating != null
-                  ? Text("You selected $_rating rating",
-                      style: TextStyle(fontSize: 18))
-                  : Container()
+              SizedBox(
+                  height: 44,
+                  child: (_rating != null && _rating != 0)
+                      ? Text("You selected $_rating rating",
+                          style: TextStyle(fontSize: 18))
+                      : SizedBox.shrink())
             ],
           ),
         ));
